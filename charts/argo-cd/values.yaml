@@ -9,3 +9,13 @@ argo-cd:
         - type: helm
           name: argo-cd
           url: https://argoproj.github.io/argo-helm
+  ingress:
+    enabled: true
+    annotations:
+      metallb.universe.tf/address-pool: default  # Specify the address pool name
+    pathType: ImplementationSpecific
+    hosts:
+      - host: argocd.example.com
+        paths:
+          - /
+
