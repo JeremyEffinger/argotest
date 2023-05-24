@@ -9,7 +9,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: argo-cd
-  project: argotest
+  project: default
   source:
     path: charts/argo-cd
     repoURL: https://github.com/JeremyEffinger/argotest.git
