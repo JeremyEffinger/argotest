@@ -9,6 +9,8 @@ argo-cd:
         - type: helm
           name: argo-cd
           url: https://argoproj.github.io/argo-helm
+    service:
+      type: LoadBalancer
   ingress:
     enabled: true
     annotations:
