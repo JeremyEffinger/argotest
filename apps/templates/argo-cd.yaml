@@ -14,8 +14,8 @@ spec:
     path: charts/argo-cd
     repoURL: https://github.com/JeremyEffinger/argotest.git
     targetRevision: HEAD
-    {{- include "argo-cd.hooks" . | nindent 4 }}
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+  {{- .Files.Get "charts/argo-cd/hooks.yaml" | nindent 2 }}
